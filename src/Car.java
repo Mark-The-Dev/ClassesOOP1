@@ -1,22 +1,32 @@
 public class Car {
 
-    private int doors;
-    private int wheels;
-    private String model;
-    private String engine;
-    private String color;
+    private boolean engine = true;
+    private int cylinders;
+    private String name;
+    private int wheels = 4;
 
-    public void setModel(String model){
-        String validModel = model.toLowerCase();
-        if (validModel.equals("carrera") || validModel.equals("commodore")){
-            this.model = model;
-        } else {
-            this.model = "Unknown";
-        }
+    public Car(int cylinders, String name) {
+        this.cylinders = cylinders;
+        this.name = name;
     }
 
-    public String getModel(){
-        return this.model;
+    public String startEngine(){
+        return "Car => engine is starting.";
     }
 
+    public String accelerate(){
+        return "Car =>  is accelerating.";
+    }
+
+    public String brake(){
+        return "Car =>  is breaking.";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
 }
